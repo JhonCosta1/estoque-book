@@ -25,4 +25,11 @@ main {
 #area-login {
   border: 1px solid red;
   display: flex;
+  justify-content: center;
+}
+
+#img-login {
+  width: 500px;
+  height: 500px;
+  background-image: url(70af1556fc2e558292bb.svg);
 }
