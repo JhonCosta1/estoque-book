@@ -1,2 +1,1 @@
-import '../src/styles/main.sass';
-import './moduleb';
+import '../src/styles/main.sass'
