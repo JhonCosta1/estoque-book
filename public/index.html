@@ -16,9 +16,7 @@
 
         <main>
             <section id="area-login">
-                <section class="elemento-flutuante" id="img-login">
-                    
-                </section>
+                <section class="elemento-flutuante" id="img-login"></section>
 
                 <section id="tela-login">
                     <header id="box-titulo">
@@ -26,7 +24,7 @@
                     </header>
 
                     <section id="usuario-login">
-                        <form class="login-form" id="login-form-flex">
+                        <form class="login-form hide" id="login-form-flex">
                             <i class="fa-solid fa-user icone icone-usuario"></i>
                             <input class="input-icone" type="text" placeholder="Usuário" maxlength="15" required>
                             <i class="fa-solid fa-lock icone icone-senha"></i>
@@ -39,7 +37,22 @@
                             <button type="submit" class="btn btn-entrar">Entrar</button>
                             <button type="button" class="btn btn-cadastrar">Cadastrar</button>
                         </form>
-                        
+
+                        <form class="login-form" id="login-form-flex">
+
+
+                            <i class="fa-solid fa-user icone icone-usuario"></i>
+                            <input class="input-icone" type="text" placeholder="Usuário" maxlength="15" required>
+                            <i class="fa-solid fa-lock icone icone-senha"></i>
+                            <i class="fa-solid fa-lock icone icone-senha-confirmar"></i>
+                            <input type="password" id="senha-cadastro" placeholder="Senha" maxlength="10" required>
+                            <input type="password" id="confirma-senha-cadastro" placeholder="Confirme a senha" maxlength="10" required>
+                            <i class="fa-solid fa-at icone icone-email"></i>
+                            <input type="email" id="email-cadastro" placeholder="Email" maxlength="30" required>
+                            <button type="submit" id="finalizar-cadastro" class="btn btn-cadastrar">Finalizar cadastro</button>
+                            <button type="button" id="voltar-login" class="btn btn-voltar">Voltar</button>
+                        </form>
+
                     </section>
                 </section>
             </section>

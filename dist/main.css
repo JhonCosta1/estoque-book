@@ -114,6 +114,7 @@ main {
   height: 270px;
 }
 
+input[type=email],
 input[type=text],
 input[type=password] {
   width: 100%;
@@ -124,6 +125,7 @@ input[type=password] {
   box-sizing: border-box;
   transition: border-color 0.3s;
 }
+input[type=email]:focus,
 input[type=text]:focus,
 input[type=password]:focus {
   border-color: #3b5998;
@@ -141,6 +143,14 @@ input[type=password]:focus {
 .icone-senha {
   left: 10px;
   top: 51px;
+}
+.icone-senha-confirmar {
+  left: 10px;
+  top: 94px;
+}
+.icone-email {
+  left: 10px;
+  top: 139px;
 }
 
 #lembrar-acesso {
@@ -177,6 +187,10 @@ input[type=password]:focus {
 
 ::placeholder {
   color: #aaa;
+}
+
+.hide {
+  display: none;
 }
 
 .footer {
