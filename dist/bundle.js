@@ -20,13 +20,23 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 
 /***/ }),
 
+/***/ "./src/handlers/redirecionar_login.js":
+/*!********************************************!*\
+  !*** ./src/handlers/redirecionar_login.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   redirecionar_login: () => (/* binding */ redirecionar_login)\n/* harmony export */ });\nlet btn_redirecionar_login = document.querySelector('#redirecionar-p-login')\r\nlet get_form_login = document.querySelector('.get-form-login')\r\nlet get_form_cadastro = document.querySelector('.get-form-cadastro')\r\nlet get_subtitulo = document.querySelector('.subtitulo')\r\n\r\n\r\nlet redirecionar_login = function(){\r\n    btn_redirecionar_login.addEventListener('click', (e) => {\r\n        e.preventDefault()\r\n        get_form_cadastro.classList.add('hide')\r\n        get_subtitulo.classList.add('hide')\r\n        get_form_login.classList.remove('hide')\r\n    })\r\n}\r\n\r\n\r\n\n\n//# sourceURL=webpack://estoque-book/./src/handlers/redirecionar_login.js?");
+
+/***/ }),
+
 /***/ "./src/handlers/redirecionar_registro.js":
 /*!***********************************************!*\
   !*** ./src/handlers/redirecionar_registro.js ***!
   \***********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   redirecionar_cadastro: () => (/* binding */ redirecionar_cadastro)\n/* harmony export */ });\n\r\nlet btn_redirecionar_cadastro = document.querySelector('#redirecionar-p-cadastro')\r\nlet get_form_login = document.querySelector('.get-form-login')\r\nlet get_form_cadastro = document.querySelector('.get-form-cadastro')\r\nlet get_subtitulo = document.querySelector('.subtitulo')\r\n\r\n\r\nlet redirecionar_cadastro = function(){\r\n    btn_redirecionar_cadastro.addEventListener('click', (e) => {\r\n        e.preventDefault()\r\n        get_form_login.classList.add('hide')\r\n        get_form_cadastro.classList.remove('hide')\r\n        get_subtitulo.classList.remove('hide')\r\n    })\r\n}\r\n\r\n\r\n\n\n//# sourceURL=webpack://estoque-book/./src/handlers/redirecionar_registro.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   redirecionar_cadastro: () => (/* binding */ redirecionar_cadastro)\n/* harmony export */ });\nlet btn_redirecionar_cadastro = document.querySelector('#redirecionar-p-cadastro')\r\nlet get_form_login = document.querySelector('.get-form-login')\r\nlet get_form_cadastro = document.querySelector('.get-form-cadastro')\r\nlet get_subtitulo = document.querySelector('.subtitulo')\r\n\r\n\r\nlet redirecionar_cadastro = function(){\r\n    btn_redirecionar_cadastro.addEventListener('click', (e) => {\r\n        e.preventDefault()\r\n        get_form_login.classList.add('hide')\r\n        get_form_cadastro.classList.remove('hide')\r\n        get_subtitulo.classList.remove('hide')\r\n    })\r\n}\r\n\r\n\r\n\n\n//# sourceURL=webpack://estoque-book/./src/handlers/redirecionar_registro.js?");
 
 /***/ }),
 
@@ -36,7 +46,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src_styles_main_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../src/styles/main.sass */ \"./src/styles/main.sass\");\n/* harmony import */ var _handlers_redirecionar_registro_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./handlers/redirecionar_registro.js */ \"./src/handlers/redirecionar_registro.js\");\n\r\n\r\n\r\n//Redireciona usuário para tela de cadastro\r\n(0,_handlers_redirecionar_registro_js__WEBPACK_IMPORTED_MODULE_1__.redirecionar_cadastro)();\n\n//# sourceURL=webpack://estoque-book/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src_styles_main_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../src/styles/main.sass */ \"./src/styles/main.sass\");\n/* harmony import */ var _handlers_redirecionar_registro_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./handlers/redirecionar_registro.js */ \"./src/handlers/redirecionar_registro.js\");\n/* harmony import */ var _handlers_redirecionar_login_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./handlers/redirecionar_login.js */ \"./src/handlers/redirecionar_login.js\");\n\r\n\r\n\r\n\r\n//Redireciona usuário para tela de cadastro\r\n(0,_handlers_redirecionar_registro_js__WEBPACK_IMPORTED_MODULE_1__.redirecionar_cadastro)()\r\n//Redireciona usuário para tela de login\r\n;(0,_handlers_redirecionar_login_js__WEBPACK_IMPORTED_MODULE_2__.redirecionar_login)()\n\n//# sourceURL=webpack://estoque-book/./src/index.js?");
 
 /***/ })
 
