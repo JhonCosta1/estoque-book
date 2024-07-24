@@ -21,10 +21,11 @@
                 <section id="tela-login">
                     <header id="box-titulo">
                         <h1 id="titulo">Estoque <b>BOOK</b></h1>
+                        <h4 class="subtitulo hide">Faça seu cadastro</h4>
                     </header>
 
                     <section id="usuario-login">
-                        <form class="login-form hide" id="login-form-flex">
+                        <form class="login-form get-form-login" id="login-form-flex">
                             <i class="fa-solid fa-user icone icone-usuario"></i>
                             <input class="input-icone" type="text" placeholder="Usuário" maxlength="15" required>
                             <i class="fa-solid fa-lock icone icone-senha"></i>
@@ -35,11 +36,10 @@
                                 <p>Recuperar senha</p>
                             </span>
                             <button type="submit" class="btn btn-entrar">Entrar</button>
-                            <button type="button" class="btn btn-cadastrar">Cadastrar</button>
+                            <button id="redirecionar-p-cadastro" type="button" class="btn btn-cadastrar">Cadastrar</button>
                         </form>
 
-                        <form class="login-form" id="login-form-flex">
-
+                        <form class="login-form hide get-form-cadastro" id="login-form-flex">
 
                             <i class="fa-solid fa-user icone icone-usuario"></i>
                             <input class="input-icone" type="text" placeholder="Usuário" maxlength="15" required>

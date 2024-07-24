@@ -42,6 +42,13 @@ h1 {
   color: #1127ea;
 }
 
+.subtitulo {
+  font-size: 18px;
+  text-align: center;
+  color: #1127ea;
+  font-family: "Roboto";
+}
+
 * {
   padding: 0;
   margin: 0;

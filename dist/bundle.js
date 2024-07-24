@@ -20,13 +20,23 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 
 /***/ }),
 
+/***/ "./src/handlers/redirecionar_registro.js":
+/*!***********************************************!*\
+  !*** ./src/handlers/redirecionar_registro.js ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   redirecionar_cadastro: () => (/* binding */ redirecionar_cadastro)\n/* harmony export */ });\n\r\nlet btn_redirecionar_cadastro = document.querySelector('#redirecionar-p-cadastro')\r\nlet get_form_login = document.querySelector('.get-form-login')\r\nlet get_form_cadastro = document.querySelector('.get-form-cadastro')\r\nlet get_subtitulo = document.querySelector('.subtitulo')\r\n\r\n\r\nlet redirecionar_cadastro = function(){\r\n    btn_redirecionar_cadastro.addEventListener('click', (e) => {\r\n        e.preventDefault()\r\n        get_form_login.classList.add('hide')\r\n        get_form_cadastro.classList.remove('hide')\r\n        get_subtitulo.classList.remove('hide')\r\n    })\r\n}\r\n\r\n\r\n\n\n//# sourceURL=webpack://estoque-book/./src/handlers/redirecionar_registro.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src_styles_main_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../src/styles/main.sass */ \"./src/styles/main.sass\");\n\r\n\n\n//# sourceURL=webpack://estoque-book/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src_styles_main_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../src/styles/main.sass */ \"./src/styles/main.sass\");\n/* harmony import */ var _handlers_redirecionar_registro_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./handlers/redirecionar_registro.js */ \"./src/handlers/redirecionar_registro.js\");\n\r\n\r\n\r\n//Redireciona usuário para tela de cadastro\r\n(0,_handlers_redirecionar_registro_js__WEBPACK_IMPORTED_MODULE_1__.redirecionar_cadastro)();\n\n//# sourceURL=webpack://estoque-book/./src/index.js?");
 
 /***/ })
 
@@ -57,6 +67,23 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	(() => {
 /******/ 		// define __esModule on exports
