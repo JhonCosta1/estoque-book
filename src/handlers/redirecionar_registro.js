@@ -1,4 +1,3 @@
-
 let btn_redirecionar_cadastro = document.querySelector('#redirecionar-p-cadastro')
 let get_form_login = document.querySelector('.get-form-login')
 let get_form_cadastro = document.querySelector('.get-form-cadastro')
