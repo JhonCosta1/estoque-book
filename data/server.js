@@ -2,6 +2,7 @@ require('dotenv').config()
 const express = require('express') //chama o pacote express
 const mongoose = require('mongoose')
 const app = express() //chama pacote express como função
+const cors = require('cors')
 const dbuser = process.env.DB_USER
 const dbpassword = process.env.DB_PASSWORD
 const dbhost = process.env.DB_HOST
@@ -12,6 +13,7 @@ app.use(
         extended: true,
     }),
 )
+app.use(cors())
 
 app.use(express.json())
 
@@ -19,6 +21,7 @@ app.use(express.json())
 const user_routes = require('../routes/user_routes')
 
 app.use('/usuario', user_routes)
+
 
 app.get('/', user_routes)
 

@@ -1,25 +1,27 @@
 import { validar_form } from './validar_cadastro_campos.js'
+import { limpar_form } from './limpar_cadastro.js'
+import { gera_modal } from './modal.js'
 
-let usuario_cadastro_db = document.querySelector("#usuario-cadastro")
-let senha_cadastro_db = document.querySelector("#senha-cadastro")
-let senha_cadastro_confirmar_db = document.querySelector("#confirma-senha-cadastro")
-let email_cadastro_db = document.querySelector("#email-cadastro")
 let btn_finalizar_cadastro = document.querySelector("#finalizar-cadastro")
 
 let btn_validar = function(){
     btn_finalizar_cadastro.addEventListener('click', async (e) => {
+        let usuario_cadastro_db = document.querySelector("#usuario-cadastro").value
+        let senha_cadastro_db = document.querySelector("#senha-cadastro").value
+        let senha_cadastro_confirmar_db = document.querySelector("#confirma-senha-cadastro").value
+        let email_cadastro_db = document.querySelector("#email-cadastro").value
         e.preventDefault()
 
         if(validar_form()) {
 
             let post_data = {
-                title: "foo",
-                body: "bar",
-                userId: 2
-              }
+                nome: usuario_cadastro_db,
+                email: email_cadastro_db,
+                password: senha_cadastro_db
+            }
 
             try {
-                const response = await fetch('http://localhost:3000/usuarios/', {
+                const response = await fetch('http://localhost:3000/usuario', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -28,13 +30,21 @@ let btn_validar = function(){
                 })
 
                 const result = await response.json()
-                console.log('Sucesso:', result)
+                if(!result.error){
+                    gera_modal(result.message)
+                } else {
+                    gera_modal(result.error)
+                }
+                
             } catch (error) {
-                console.error('Erro:', error);
+                gera_modal(error)
+                console.error('Erro:', error)
             }
+
+            limpar_form()
             
         } else {
-            alert('errou')
+            gera_modal('Por favor, preencha todos os campos corretamente.')
         }
     })
 }
