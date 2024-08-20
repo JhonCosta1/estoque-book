@@ -24,6 +24,12 @@
 .btn-modal {
   background-color: red;
 }
+.btn-recuperar {
+  background-color: green;
+}
+.btn-recuperar:hover {
+  background-color: #e9df4f;
+}
 
 h1 {
   text-align: center;
@@ -161,6 +167,18 @@ input[type=password]:focus {
 .icone-email {
   left: 10px;
   top: 139px;
+}
+.icone-email-recuperar {
+  left: 10px;
+  top: 10px;
+}
+.icone-senha-recuperar {
+  left: 10px;
+  top: 52px;
+}
+.icone-senha-recuperar-confirmar {
+  left: 10px;
+  top: 95px;
 }
 
 #lembrar-acesso {

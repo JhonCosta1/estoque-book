@@ -4,30 +4,30 @@ const Usuario = require('../models/person')
 
 // criar
 router.post('/', async (req, res) => {
-    const { nome, password, email, produtos } = req.body;
+    const { nome, password, email, produtos } = req.body
 
     // Validação dos campos obrigatórios
     if (!nome) {
-        return res.status(422).json({ error: 'Nome é obrigatório' });
+        return res.status(422).json({ error: 'Nome é obrigatório' })
     }
     if (!password) {
-        return res.status(422).json({ error: 'Senha é obrigatória' });
+        return res.status(422).json({ error: 'Senha é obrigatória' })
     }
     if (!email) {
-        return res.status(422).json({ error: 'Email é obrigatório' });
+        return res.status(422).json({ error: 'Email é obrigatório' })
     }
 
     try {
         // Verificação se o nome já existe
-        const valida_nome = await Usuario.findOne({ nome: nome });
+        const valida_nome = await Usuario.findOne({ nome: nome })
 
         if (valida_nome) {
-            return res.status(409).json({ error: 'Nome já cadastrado' });
+            return res.status(409).json({ error: 'Nome já cadastrado' })
         }
 
-        const valida_email = await Usuario.findOne({ email: email });
+        const valida_email = await Usuario.findOne({ email: email })
         if (valida_email) {
-            return res.status(409).json({ error: 'Email já cadastrado' });
+            return res.status(409).json({ error: 'Email já cadastrado' })
         }
 
         const usuario = {
@@ -40,47 +40,31 @@ router.post('/', async (req, res) => {
 
         // Criação do usuário
         await Usuario.create(usuario)
-        res.status(201).json({ message: 'Cadastro efetuado com sucesso.' })
+        res.status(201).json({ message: 'Cadastro efetuado com sucesso' })
     } catch (error) {
         res.status(500).json({ error: 'Erro ao verificar ou criar usuário' })
     }
 })
 
 router.patch('/:id', async (req, res) => {
-    const id = req.params.id;
-    const { nome, password, email, produtos } = req.body;
-
-    /* Validação dos produtos
-    if (!Array.isArray(produtos) || produtos.length === 0) {
-        return res.status(422).json({ error: 'Produtos devem ser um array não vazio' });
-    } */
-
-    const usuario = {
-        nome,
-        password,
-        email,
-        produtos: produtos || []
+    const id = req.params.id
+    const { password } = req.body
+    
+    // Validações
+    if (!password) {
+        return res.status(422).json({ error: 'Senha é obrigatória' })
     }
 
     try {
-        // Encontrar o usuário pelo ID
-        const usuarioAtt = await Usuario.updateOne({_id: id}, usuario);
-        
-        if (!usuario) {
-            return res.status(404).json({ error: 'Usuário não encontrado' });
-        }
+        // Atualizar o usuário com a nova senha
+        const usuario = await Usuario.updateOne({ _id: id }, { password })
 
-        // Adicionar os novos produtos ao array existente
-        //usuario.produtos = usuario.produtos.concat(produtos);
-
-        // Salvar as mudanças
-        //await usuario.save();
-
-        res.status(200).json({ message: 'Produtos adicionados com sucesso', usuario });
+        res.status(200).json({ message: 'Senha atualizada com sucesso' })
     } catch (error) {
-        res.status(500).json({ error: 'Erro ao adicionar produtos' });
+        res.status(500).json({ error: 'E-mail incorreto ou não existe' })
     }
-});
+})
+
 
 
 router.get('/', async (req, res) => {
@@ -106,5 +90,6 @@ router.get('/:id', async (req, res) => {
     }
 
 })
+
 
 module.exports = router

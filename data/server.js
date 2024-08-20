@@ -25,6 +25,7 @@ app.use('/usuario', user_routes)
 
 app.get('/', user_routes)
 
+
 mongoose.connect(`mongodb+srv://${dbuser}:${dbpassword}@cluster0.tvvajsj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`)
     .then(() => {
         app.listen(`${dbhost}`)
