@@ -1,4 +1,5 @@
 import { gera_modal } from './modal.js'
+import { limpar_recuperar } from './limpar_recuperar.js'
 import { get_email } from './retornar_id_api.js'
 import { get_senha } from './retornar_senha_api.js'
 
@@ -36,6 +37,7 @@ const alterar_senha = () => {
         const api_email = await get_email()
         const api_senha = await get_senha()
         const api_retornada = await get_usuarios(api_email, api_senha)
+        limpar_recuperar()
         
     })
 }

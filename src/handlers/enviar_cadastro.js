@@ -32,6 +32,7 @@ let btn_validar = function(){
                 const result = await response.json()
                 if(!result.error){
                     gera_modal(result.message)
+                    limpar_form()
                 } else {
                     gera_modal(result.error)
                 }
@@ -41,7 +42,7 @@ let btn_validar = function(){
                 console.error('Erro:', error)
             }
 
-            limpar_form()
+            
             
         } else {
             gera_modal('Por favor, preencha todos os campos corretamente.')
